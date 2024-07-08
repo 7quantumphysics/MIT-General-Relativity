@@ -1,0 +1,238 @@
+\section*{Video 6: The Principle of Equivalence}
+\hskip 25pt Continuing where the last video left off, we define the basis vectors for the cylindrical coordinates in terms
+of the Cartesian basis.
+\begin{equation}
+  \begin{aligned}
+    \widehat{r}\ &=\ \cos\varphi\ \hat{x}\ +\ \sin\varphi\ \hat{y}\ =\ L^{\alpha}_{1}\ \hat{e}_{\alpha}\\
+    \widehat{\varphi}\ &=\ -\sin\varphi\ \hat{x}\ +\ \cos\varphi\ \hat{y}\ =\ L^{\alpha}_{2}\ \hat{e}_{\alpha}
+  \end{aligned}
+\end{equation}
+Now, remember that one of the first tensors to work with is the metric for Minkowski space.
+\begin{equation}
+  \eta_{\mu\nu}\ =\ \hat{e}_{\mu}\ \cdot\ \hat{e}_{\nu}
+\end{equation}
+To simply define a general metric, we do the same thing with any coordinate basis.  The general metric is labeled as
+$\underline{\underline{\mathbf{g}}}$.
+\begin{equation}
+  g_{\mu\nu}\ =\ \hat{e}_{\mu}\ \cdot\ \hat{e}_{\nu}
+\end{equation}
+At some point, we want to calculate derivatives.  With curvilinear coordinate systems in general, the basis vectors
+vary with the coordinates.
+\begin{gather}
+  \frac{\partial\hat{r}}{\partial r}\ =\ 0 \\
+  \frac{\partial\hat{r}}{\partial\varphi}\ =\ \frac{\widehat{\varphi}}{r} \\
+  \frac{\partial\widehat{\varphi}}{\partial r}\ =\ \frac{\widehat{\varphi}}{r} \\
+  \frac{\partial\widehat{\varphi}}{\partial\varphi}\ =\ -r\ \hat{r}
+\end{gather}
+
+\hskip 25pt Lets say there is a vector $\underline{\mathbf{V}}$ that is defined in cylindrical coordinates as
+$V^{\alpha}\hat{e}_{\alpha}$.  Supoose we wanted to write the "gradient" of this vector.  In an abstract,
+ugly notation, this would be
+\begin{equation}
+  \underline{\nabla}\underline{\mathbf{V}}\ =\
+  \partial_{\beta}\left (V^{\alpha}\hat{e}_{\alpha}\right )\widetilde{\omega}^{\beta}
+\end{equation}
+where $\widetilde{\omega}^{\beta}$ are the basis one-forms ("inverses" of the basis vectors $\hat{e}_{\beta}$).
+Ignoring the $\widetilde{\omega}^{\beta}$ for a moment, the rest of this "gradient" should be some "tensorial"
+object.  Lets expand that derivative term.
+\begin{equation}
+  \frac{\partial\underline{\mathbf{V}}}{\partial x^{\beta}}\ =\
+  \frac{\partial V^{\alpha}}{\partial x^{\beta}}\hat{e}_{\alpha}\ +\
+  V^{\alpha}\frac{\partial\hat{e}_{\alpha}}{\partial x^{\beta}}
+\end{equation}
+Note that the sum of these two components behaves as a tensor, but the individual addens do not.  With that in the back of our
+head, lets look at the second term.  We have shown (at least for cylindrical coordinates) that the derivatives of
+basis vectors can be written in terms of other basis vectors.  So, we can choose to write the second term as a
+linear combination of basis vectors.  To write it in the Einstein index summation notation, we introduce a new symbol
+to help define the coefficients for the linear combination.
+\begin{equation}
+  \partial_{\beta}\hat{e}_{\alpha}\ =\ \Gamma_{\alpha\beta}^{\mu}\hat{e}_{\mu}
+\end{equation}
+The Christoffel symbol $\Gamma$ is not a tensor, but it can be used to get tensorial objects.  The
+Christoffel symbol is understood with three indices.  The top index shows which unit vector we are using as a basis for
+the linear combination, the first lower index shows which basis vector is being differentiated and the
+second lower index shows which coordinate we are differentiating with.  For the cylindrical
+coordinates, the derivatives of the basis vectors we worked out earlier shows us the "relavent" Christoffel symbols.
+\begin{gather}
+  \Gamma^{r}_{rr}\ =\ \Gamma^{\varphi}_{rr}\ =\ 0 \\
+  \Gamma^{\varphi}_{r\varphi}\ =\ \frac{1}{r} \\
+  \Gamma^{\varphi}_{\varphi r}\ =\ \frac{1}{r} \\
+  \Gamma^{r}_{\varphi\varphi}\ =\ -r
+\end{gather}
+Now, the derivative of the 4-vector can be written in terms of the linear combination of basis vectors, or in terms of the
+Christoffel symbols.
+\begin{equation}
+  \partial_{\beta}\underline{\mathbf{V}}\ =\
+  \partial_{\beta}V^{\alpha}\hat{e}_{\alpha}\ +\ V^{\alpha}\Gamma^{\mu}_{\alpha\beta}\hat{e}_{\mu}
+\end{equation}
+Taking notice of the dummy indices required for the contractions, we can factor out the basis vectors $\hat{e}_{\alpha}$.
+\begin{equation}
+  \partial_{\beta}\underline{\mathbf{V}}\ =\
+  \left (\partial_{\beta}V^{\alpha}\ +\ V^{\mu}\Gamma^{\alpha}_{\mu\beta}\right )\hat{e}_{\alpha}
+\end{equation}
+The term in the parenthesis comes up A LOT, so lets give it some new notation and a fancy name to boot!  It's called
+the covariant derivative.  So, the term in the parenthesis is now the covariant derivative of component $V^{\alpha}$
+with respect to $x^{\beta}$ and is labeled as $\nabla_{\beta}V^{\alpha}$.
+\begin{equation}
+  \begin{gathered}
+    \partial_{\beta}\underline{\mathbf{V}}\ =\
+    \left (\nabla_{\beta}V^{\alpha}\right )\hat{e}_{\alpha} \\
+    \nabla_{\beta}V^{\alpha}\ =\ \partial_{\beta}V^{\alpha}\ +\ \Gamma^{\alpha}_{\mu\beta}V^{\mu}
+  \end{gathered}
+\end{equation}
+An immediate application for the covarient derivative can be for the divergence of a 4-vector.
+\begin{equation}
+  \underline{\mathbf{\nabla}}\cdot\underline{\mathbf{V}}\ =\ \nabla_{\alpha}V^{\alpha}\ =\
+  \partial_{\alpha}V^{\alpha}\ +\ \Gamma^{\alpha}_{\beta\alpha}V^{\beta}
+\end{equation}
+For the cylindrical coordinates this has five terms.
+\begin{equation}
+  \underline{\mathbf{\nabla}}\cdot\underline{\mathbf{V}}\ =\
+  \partial_{t}V^{t}\ +\ \partial_{r}V^{r}\ +\ \partial_{\varphi}V^{\varphi}\ +\ \partial_{z}V^{z}\ +\ \frac{1}{r}V^{r}
+\end{equation}
+
+\hskip 25pt What about taking derivatives of things other than 4-vectors?  For scalars, they have no unit basis vectors by
+definition, so they're straightforward.  How about a 1-form?  For a 1-form, let's start with our understanding of
+covariant derivatives for scalars and 4-vectors, combined with the knowledge that the contraction of a 4-vector with a
+1-form results in a Lorentz scalar.
+\begin{equation}
+  \begin{aligned}
+    \nabla_{\rho}\left (W_{\alpha}V^{\alpha}\right )\ &=\ \partial_{\rho}\left (W_{\alpha}V^{\alpha}\right ) \\
+    \nabla_{\rho}W_{\alpha}V^{\alpha}\ +\ W_{\alpha}\nabla_{\rho}V^{\alpha}\ &=\
+    \partial_{\rho}W_{\alpha}V^{\alpha}\ +\ W_{\alpha}\partial_{\rho}V^{\alpha} \\
+    \nabla_{\rho}W_{\alpha}V^{\alpha}\ +\ W_{\alpha}\nabla_{\rho}V^{\alpha}\ &=\
+    \partial_{\rho}W_{\alpha}V^{\alpha}\ +\ W_{\alpha}\nabla_{\rho}V^{\alpha}\ -\ W_{\alpha}\Gamma^{\alpha}_{\mu\rho}V^{\mu} \\
+    \nabla_{\rho}W_{\alpha}V^{\alpha}\ +\ \cancelto{}{W_{\alpha}\nabla_{\rho}V^{\alpha}}\ &=\
+    \partial_{\rho}W_{\alpha}V^{\alpha}\ +\ \cancelto{}{W_{\alpha}\nabla_{\rho}V^{\alpha}}\
+    -\ W_{\alpha}\Gamma^{\alpha}_{\mu\rho}V^{\mu} \\
+    \nabla_{\rho}W_{\alpha}V^{\alpha}\ &=\ \partial_{\rho}W_{\alpha}V^{\alpha}\ -\
+    W_{\alpha}\Gamma^{\alpha}_{\mu\rho}V^{\mu} \\
+    \left (\nabla_{\rho}W_{\alpha}\right )\cancelto{}{V^{\alpha}}\ &=\
+    \left (\partial_{\rho}W_{\alpha}\ -\ W_{\mu}\Gamma^{\mu}_{\alpha\rho}\right )\cancelto{}{V^{\alpha}} \\
+    \nabla_{\rho}W_{\alpha}\ &=\ \partial_{\rho}W_{\alpha}\ -\ \Gamma^{\mu}_{\alpha\rho}W_{\mu} 
+  \end{aligned}
+\end{equation}
+For tensors we can deduce how to write it based on index balancing and whether or not the index is
+"upstairs" or "downstairs".  This is not "rigorous", but it gives enough intuition to determine how many terms we need
+(an additional Christoffel symbol per index) and which sign it needs ($+$ for upstairs and $-$ for downstairs).  
+\begin{gather}
+  \nabla_{\rho}\Phi\ =\ \partial_{\rho}\Phi \\
+  \nabla_{\rho}V^{\alpha}\ =\ \partial_{\rho}V^{\alpha}\ +\ \Gamma^{\alpha}_{\sigma\rho}V^{\sigma} \\
+  \nabla_{\rho}W_{\beta}\ =\ \partial_{\rho}W_{\beta}\ -\ \Gamma^{\sigma}_{\beta\rho}W_{\sigma} \\
+  \nabla_{\rho}T^{\alpha\beta...\mu}_{\gamma\delta...\nu}\ =\
+  \partial_{\rho}T^{\alpha\beta...\mu}_{\gamma\delta...\nu}\ 
+  +\ \left (\Gamma^{\alpha}_{\sigma\rho}T^{\sigma\beta...\mu}_{\gamma\delta...\nu}\ +\
+  \Gamma^{\beta}_{\sigma\rho}T^{\alpha\sigma...\mu}_{\gamma\delta...\nu}\ +\ ...\ +\ 
+  \Gamma^{\mu}_{\sigma\rho}T^{\alpha\beta...\sigma}_{\gamma\delta...\nu}\right )\
+  -\ \left (\Gamma^{\sigma}_{\gamma\rho}T^{\alpha\beta...\mu}_{\sigma\delta...\nu}\ +\
+  \Gamma^{\sigma}_{\delta\rho}T^{\alpha\beta...\mu}_{\gamma\sigma...\nu}\ +\ ...\ +\
+  \Gamma^{\sigma}_{\nu\rho}T^{\alpha\beta...\mu}_{\gamma\delta...\sigma}\right )
+\end{gather}
+
+\hskip 25pt This information will help to define a better way of finding Christoffel symbols than building the symbols
+piece by piece, solving the derivatives of the basis vectors one by one.  There are still some features of tensors and
+derivatives that need to be seen before that "better way" can be shown.  To ease our way into it, lets think of a
+strange operator acting on a scalar.  Namely, what would the "double gradient" of a scalar look like in a Cartesian
+basis?
+\begin{equation}
+  \underline{\nabla}\underline{\nabla}\Phi\ =\
+  \partial_{\alpha}\partial_{\beta}\Phi\ \widetilde{\omega}^{\alpha}\widetilde{\omega}^{\beta}
+\end{equation}
+Its clear that these partial derivatives are symmetric and can be swapped.  This means that the "tensorial" object
+this creates is symmertrical in indices $\alpha$ and $\beta$.  What about a general representation of this "double
+gradient"?  The only difference is that it will be dependent on covarient derivatives.
+\begin{equation}
+  \underline{\nabla}\underline{\nabla}\Phi\ =\
+  \nabla_{\alpha}\nabla_{\beta}\Phi\ \widetilde{\omega}^{\alpha}\widetilde{\omega}^{\beta}
+\end{equation}
+One thing to realize about this is that if this double gradient is a tensor then, regardless of which coordinate
+representation we choose, it should be symmetric, because it is already shown to be obviously symmetric under the
+Cartesian coordinate basis.  Given that this tensor should be symmetric means that the order of operations of
+two covarient derivatives can be swapped, just like partial derivatives.
+\begin{equation}
+  \nabla_{\alpha}\nabla_{\beta}\Phi\ =\ \nabla_{\beta}\nabla_{\alpha}\Phi
+\end{equation}
+Lets expand these covariant derivatives out.
+\begin{equation}
+  \begin{aligned}
+    \nabla_{\alpha}\left (\partial_{\beta}\Phi\right )\ &=\ \nabla_{\beta}\left (\partial_{\alpha}\Phi\right ) \\
+    \cancelto{}{\partial_{\alpha}\left (\partial_{\beta}\Phi\right )}\
+    -\ \Gamma^{\sigma}_{\beta\alpha}\left (\partial_{\sigma}\Phi\right )\ &=\
+    \cancelto{}{\partial_{\beta}\left (\partial_{\alpha}\Phi\right )}\
+    -\ \Gamma^{\sigma}_{\alpha\beta}\left (\partial_{\sigma}\Phi\right ) \\
+    \left (\Gamma^{\sigma}_{\alpha\beta}\ -\ \Gamma^{\sigma}_{\beta\alpha}\right )\partial_{\sigma}\Phi\ &=\ 0
+  \end{aligned}
+\end{equation}
+This reveals something about the Christoffel symbols: If we require that this tensorial operation be symmetric in all
+representations as a true tensor, the Christoffel symbols can also be shown to be symmetric given that the
+single gradient of the scalar is non-zero.
+
+\hskip 25pt In light of seeing symmetric vs anti-symmetric tensors it's useful now to introduce some more notation.  We
+can define "simplified" notation to express a "symmetric" operation and an "anti-symmetric" operation of a tensor.
+\begin{gather}
+  T_{\{\alpha\beta\}}\ \equiv\ \frac{1}{2}\left (T_{\alpha\beta}\ +\ T_{\beta\alpha}\right ) \\
+  T_{[\alpha\beta]}\ \equiv\ \frac{1}{2}\left (T_{\alpha\beta}\ -\ T_{\beta\alpha}\right )
+\end{gather}
+Given what we've just shown for the Christoffel symbols, we can write some expressions.
+\begin{gather}
+  \Gamma^{\sigma}_{\{\alpha\beta\}}\ =\ \Gamma^{\sigma}_{\alpha\beta} \\
+  \Gamma^{\sigma}_{[\alpha\beta]}\ =\ 0
+\end{gather}
+We can also remember what happens when a symmetric matrix gets contracted with an anti-symmetric matrix,
+$\underline{\underline{\mathbf{A}}}$.
+\begin{equation}
+  \Gamma^{\sigma}_{\alpha\beta}A^{\alpha\beta}\ =\
+  \Gamma^{\sigma}_{\{\alpha\beta\}}A^{[\alpha\beta]}\ =\ 0
+\end{equation}
+
+\hskip 25pt With all of this in mind, lets finally derive the "better way" to get Christoffel symbols.  We begin the
+derivation with the gradient of the metric tensor.
+\begin{equation}
+  \underline{\nabla}\ \underline{\underline{\mathbf{g}}}\ =\
+  \nabla_{\gamma}g_{\alpha\beta}\ 
+  \widetilde{\omega}^{\beta}\ \bigotimes\ \widetilde{\omega}^{\alpha}\ \bigotimes\ \widetilde{\omega}^{\gamma}
+\end{equation}
+Again, we assert that we want tensorial operations like this to be the same in any given coordinate representation.  So,
+this gradient of a general metric should be the same as the gradient of the Minkowski metric.
+\begin{equation}
+  \underline{\nabla}\ \underline{\underline{\eta}}\ =\
+  \nabla_{\gamma}\eta_{\alpha\beta}\ 
+  \widetilde{\omega}^{\beta}\ \bigotimes\ \widetilde{\omega}^{\alpha}\ \bigotimes\ \widetilde{\omega}^{\gamma}\ \equiv\ 0
+\end{equation}
+This leads us to require that the covariant derivative of any general metric must be equal to zero.
+\begin{equation}
+  \nabla_{\gamma}g_{\alpha\beta}\ =\ 0
+\end{equation}
+With this choice of three indices ($\gamma$, $\alpha$ and $\beta$) this metric relation can also be expressed
+by strategic swapping of these indices.  For this derivation, we shuffle the indices in the same way we shuffle
+indices for the Levi-Civita symbol that keep them equal to each other.  For example:
+$$ \varepsilon_{abc}\ =\ \varepsilon_{cab}\ =\ \varepsilon_{bca} $$
+Also, for each of these three ways to express this metric relation, we expand the definition of the covariant derivative
+with the Christoffel symbols.  This is what will lead into the "better" form of the Christoffel symbol.
+\begin{equation}
+  \nabla_{\gamma}g_{\alpha\beta}\ =\ \partial_{\gamma}g_{\alpha\beta}\ -\
+  \Gamma^{\mu}_{\alpha\gamma}g_{\mu\beta}\ -\ \Gamma^{\mu}_{\beta\gamma}g_{\alpha\mu}\ =\ 0
+  \label{eq:ONE}
+\end{equation}
+\begin{equation}
+  \nabla_{\beta}g_{\gamma\alpha}\ =\ \partial_{\beta}g_{\gamma\alpha}\ -\
+  \Gamma^{\mu}_{\gamma\beta}g_{\mu\alpha}\ -\ \Gamma^{\mu}_{\alpha\beta}g_{\gamma\mu}\ =\ 0
+  \label{eq:TWO}
+\end{equation}
+\begin{equation}
+  \nabla_{\alpha}g_{\beta\gamma}\ =\ \partial_{\alpha}g_{\beta\gamma}\ -\
+  \Gamma^{\mu}_{\beta\alpha}g_{\mu\gamma}\ -\ \Gamma^{\mu}_{\gamma\alpha}g_{\beta\mu}\ =\ 0
+  \label{eq:THREE}
+\end{equation}
+All of these covariant derivatives are equal to zero, hence all of these expressions are equal to each other;
+Expression~\eqref{eq:ONE} = Expression~\eqref{eq:TWO} = Expression~\eqref{eq:THREE}.  This means that
+Expression~\eqref{eq:ONE} - Expression~\eqref{eq:TWO} = Expression~\eqref{eq:THREE}.  This ALSO means that
+Expression~\eqref{eq:ONE} - Expression~\eqref{eq:TWO} - Expression~\eqref{eq:THREE} = 0.  Without much thought, these
+seem to be ugly, arbitrary computations.  But, by taking advantage of the symmetry of the Christoffel symbols, many terms
+cancel from this combination of the expressions and leaves behind one Christoffel symbol and a bunch of metric terms.
+Without writing all of the cancellations and simplifications explicity, this gives the "better way" of expressing the
+Christoffel symbols.
+\begin{equation}
+  \Gamma^{\mu}_{\alpha\beta}\ =\ -\frac{1}{2}g^{\mu\gamma}
+  \left (\partial_{\gamma}g_{\alpha\beta}\ -\ \partial_{\beta}g_{\gamma\alpha}\ -\ \partial_{\alpha}g_{\beta\gamma}\right )
+\end{equation}

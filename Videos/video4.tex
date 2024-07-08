@@ -1,0 +1,258 @@
+\section*{Video 4: Volumes and Volume Elements; Conservation Laws}
+\hskip 25pt We begin with apriori knowledge of the existence of a 4-velocity, which will be defined for a general observer
+to be
+
+\begin{equation}
+  \underline{\mathbf{u}}\ =\ \left (\gamma,\ \gamma\vec{v}\right )
+\end{equation}
+$$\mathit{and}$$
+\begin{equation}
+  \underline{\mathbf{u}}\ \circeq\ \left (1,\ 0\right )
+\end{equation}
+as measured by the "stationary" observer where any vector $\underline{\mathbf{A}}$ will represent a 4-vector, $\vec{A}$ will be a standard 3-vector and natural units ($\hbar=c=1$) will be used unless explicity written otherwise.  Similarly, the 4-momentum is defined as
+
+\begin{equation}
+  \underline{\mathbf{p}}\ =\ m\underline{\mathbf{u}}\ =\ \left (\gamma m,\ \vec{p}\right )
+\end{equation}
+These 4-vectors have invariant quantities
+
+\begin{equation}
+  \begin{gathered}
+    \underline{\mathbf{u}}\underline{\mathbf{u}}\ =\ \underline{\mathbf{u}}\cdot\underline{\mathbf{u}}\
+    =\ u^{\alpha}u_{\alpha}\ =\ -1 \\
+    \underline{\mathbf{p}}\underline{\mathbf{p}}\ =\ \underline{\mathbf{p}}\cdot\underline{\mathbf{p}}\
+    =\ p^{\alpha}p_{\alpha}\ =\ -m^2
+  \end{gathered}
+\end{equation}
+For massless particles, it is convient to re-write the 4-momentum in terms of its 'angular' frequency $\omega$ and the unit vector in the direction it is traveling.
+
+\begin{equation}
+  \underline{\mathbf{p}}\ =\ \omega\left (1,\ \hat{p}\right )
+\end{equation}
+
+\hskip 25pt Building off of this, we can think about a collection of non-interacting particles.  Lets say there is a "dust" cloud in the vacuum of space, where the collection of dust particles are not interacting with one another.  The dust will have an energy density, but no collisions or forces between them.  Imagine a small Gaussian cube that will represent the physical space the dust can move in and out of.  In the rest frame of this Gaussian cube, we can ask how many particles are found within this cubic volumne of space, a.k.a. the number density.  We can define $n_0$ to be the number density of the dust within some cubic volume of space in the rest frame of this space.
+
+\begin{equation}
+  \begin{aligned}
+    n_0\ &\equiv\ \mathit{number\ density\ in\ rest\ frame}\ \\
+    &\circeq\ \frac{N}{V_0}
+  \end{aligned}
+\end{equation}
+Generally speaking, we will want to define the dust in any moving frame.  When we move out of the rest frame, we will boost into a moving frame with speed $|\vec{v}|$ relative to the dust cloud.  Boosting into another frame will not change the number of particles that make up the dust cloud, but there will be a Lorentz contraction of the Gaussian cube, which means the volume will change under Lorentz contraction.  The Lorentz contraction along the direction of motion ($x\ =\ x_0/\gamma$) will result in an additional factor of $\gamma$ to the number density as measured in the rest frame.
+
+\begin{equation}
+  \begin{aligned}
+    n\ &\equiv\ \mathit{number\ density\ in\ moving\ frame}\ \\
+    &=\ \frac{\gamma N}{V_0}\ =\ \gamma n_0
+  \end{aligned}
+\end{equation}
+Also, there is now a "flow" of the dust moving through this volume of space when observing in the boosted frame.  The cloud will be moving through space with velocity $\vec{v}$ in the boosted frame.  If we define the flux of the number density to be $\vec{n}$, then we can intuitively relate the flux to the velocity.
+
+\begin{equation}
+  \begin{aligned}
+    \vec{n}\ &\equiv\ n\vec{v} \\
+    &=\ \gamma n_0\vec{v}
+  \end{aligned}
+\end{equation}
+With both the number density and the flux of the number density we can attempt to construct a 4-vector from these two components, knowing that the components transform by a factor of $\gamma$ in boosted frames.  Let's call this 4-vector $\underline{\mathbf{N}}$.
+
+\begin{equation}
+  \begin{aligned}
+    \underline{\mathbf{N}}\ &=\ \left (n,\ \vec{n}\right ) \\
+    &=\ \left (\gamma n_0,\ \gamma n_0\vec{v}\right ) \\
+    &=\ n_0\left (\gamma,\ \gamma\vec{v}\right ) \\
+    &=\ n_0\underline{\mathbf{u}}
+  \end{aligned}
+\end{equation}
+
+\hskip 25pt Being composed of the 4-velocity, $\underline{\mathbf{N}}$ can be called a 4-vector, which describes an invariant quantity.
+
+\begin{equation}
+  \begin{gathered}
+    \underline{\mathbf{NN}}\ =\ -n_0^2 \\
+    n_0\ =\ \sqrt{-\underline{\mathbf{NN}}}
+  \end{gathered}
+\end{equation}
+BTW, this shows that the unit vector of the 4-number density, $\widehat{\underline{\mathbf{N}}}$, is equal to the 4-velocity, which is already a unit 4-vector ($\hat{\underline{\mathbf{u}}}\ =\ \underline{\mathbf{u}}$).  This shows that our logic is consistent so far.  Back to the topic at hand, suppose that we wanted to describe the flux of $\underline{\mathbf{N}}$ in the direction $dx^{\alpha}$ (or through the region $dx^{\mu}\bigwedge dx^{\nu}$, $\mu\neq\nu\neq\alpha$).  We would simply need to contract the 4-number density with the "dual-vector" of $dx^{\alpha}$.  This dual-vector should just be the delta function if good coordinates are chosen ($dx^{\mu}\bigwedge dx^{\nu}\ \equiv\ (\tilde{dx}^{\alpha})_{\beta}\ =\ \delta^{\alpha}_{\beta}$, $\mu\neq\nu\neq\alpha$).
+
+\begin{equation}
+  \delta^{\alpha}_{\beta}N^{\beta} =\ N^{\alpha}
+\end{equation}
+This is just a mathematically tidious way to say "pick the component of $\underline{\mathbf{N}}$ that is in the direction of interest".  More generally, we are taking the projection of $\underline{\mathbf{N}}$ in the unit direction of the direction of interest.
+
+\begin{equation}
+  \hat{x}_{\mu}N^{\mu}\ \equiv\ \mathit{Flux\ of\ density\ of\ particles\ in\ direction}\ \hat{\underline{\mathbf{x}}}
+\end{equation}
+The flux of $\underline{\mathbf{N}}$ through time is just its time component
+
+\begin{equation}
+  d\hat{t}\cdot\underline{\mathbf{N}}\ =\ N^0\ =\ n
+\end{equation}
+which is the number density measured in the boosted frame.  
+
+\hskip 25pt  An intuitive conservation law is to compare the rate of change of the dust in the cubic volumne of space to the flux of the dust through that space.
+
+\begin{equation}
+  \frac{\partial n}{\partial t}\ =\ -\vec{\nabla}\cdot\vec{n}
+\end{equation}
+I can also write this in integral form using the divergence theorem.
+
+\begin{equation}
+  \begin{aligned}
+    \int\ \vec{\nabla}\cdot\vec{n}\ d^3x\ &=\ \oint\ \vec{n}\cdot d^2\vec{x}\ \\
+    &\downarrow \\
+    \int\ \frac{\partial n}{\partial t}\ d^3x\ &=\ -\oint\ \vec{n}\cdot d^2\vec{x}
+  \end{aligned}
+\end{equation}
+This is true for any inertial observer who has setup there coordinate basis in a specific way (which will be demonstrated soon following a generalization of the divergence theorem in $n$ dimensions).  Given our definition of the 4-number density, this equation can be re-written to have an invariant quantity of zero.
+
+\begin{equation}
+  \partial_{\alpha}N^{\alpha}\ =\ 0
+\end{equation}
+
+\hskip 25pt It would be useful to generalize the integral forms of the conservation law(s) to $n$ dimensions rather than just three.  To start, lets focus on how we can mathematically express a volume in three dimensions.  If we have a set of three vectors, we can express the volume of a parallelopiped constructed by these vectors by wedging all three vectors together.  Given vectors $\vec{A}$, $\vec{B}$ and $\vec{C}$, the volume $V$ can be defined as
+
+\begin{equation}
+  V\ =\ \Im\left \{\vec{A}\wedge\vec{B}\wedge\vec{C}\right \}\ =\ \varepsilon_{ijk}A^iB^jC^k
+\end{equation}
+where the Levi-Civita symbol is being defined as the components of a $\begin{pmatrix}0\\ 3\end{pmatrix}$ tensor.  BTW, $\Im\{z\}$ is the imaginary component of $z$.
+  
+\begin{equation}
+  \begin{gathered}
+    \varepsilon_{ijk}\ =\ \Im\left \{ \hat{e}_i\hat{e}_j\hat{e}_k\right \}\ =\
+    \Im\left \{ \hat{e}_i\wedge\hat{e}_j\wedge\hat{e}_k\right \} \\
+    \varepsilon_{ijk}\ =\
+    \begin{cases}
+      1,\ \ i\neq j\neq k\ \mathit{and\ any\ even\ permutation\ of\ elements}\\
+      -1,\ \ i\neq j\neq k\ \mathit{and\ any\ odd\ permutation\ of\ elements}\\
+      0,\ \ \mathit{otherwise}
+    \end{cases}
+  \end{gathered}
+\end{equation}
+We will call this tensor $\underline{\underline{\mathbf{\varepsilon}}}$.  The volume in three dimensional space, which will now be denoted as $V_3$, can be generally defined as a tensor function that takes in up to three vectors as inputs.
+
+\begin{equation}
+  V_3\ =\ \underline{\underline{\mathbf{\varepsilon}}}\left (\vec{A},\ \vec{B},\ \vec{C}\right )\ =\
+  \varepsilon_{ijk}A^iB^jC^k
+\end{equation}
+Notice that if one of the vectors is left out of the entry, the Levi-Civita symbol remains, which means we construct new things depending on the number of vectors that are being put into this tensor function.  For example, if $\vec{A}$ were not included, we would describe an object that is similar to a vector, but with "downstairs" indices.  This is the 1-form of $\vec{A}$, whose indices will be labeled as $\Sigma_i$
+
+\begin{equation}
+  \begin{gathered}
+    \vec{\Sigma}\ =\ \underline{\underline{\mathbf{\varepsilon}}}\left (-,\ \vec{B},\ \vec{C}\right ) \\
+    \Sigma_i\ =\ \varepsilon_{ijk}B^jC^k
+  \end{gathered}
+\end{equation}
+where this sigma is geometrically representing a "surface" that is normal to $\vec{A}$.  This can be understood better by remembering that this tensor function $\underline{\underline{\mathbf{\varepsilon}}}$ is wedging the vectors (and ignoring the imaginary components that are a consequence of the Clifford Algebra involved with wedging orthonormal vectors).  Returning to the divergence theorem,
+
+\begin{equation}
+  \int\ \vec{\nabla}\cdot\vec{v}\ dV_3\ =\ \oint\ \vec{v}\cdot d\vec{\Sigma}
+\end{equation}
+where $\vec{v}$ is a general vector field, we can define the differential volume and surface elements.
+
+\begin{gather}
+  dV_3\ =\ d^3\vec{x}\ =\ \varepsilon_{ijk}dx^idx^jdx^k\\
+  d\vec{\Sigma}\ =\ d^2\vec{x}\ =\ \varepsilon_{ijk}dx^jdx^k
+\end{gather}
+We now have a general form of the differentials that allows us to add or subtract as many dimensions as we please.  Now, we can proceed to talking about 4 dimensions.
+
+\hskip 25pt Imagine a 4 dimensional parallelepiped made from four vectors $\vec{A}$, $\vec{B}$,	$\vec{C}$ and $\vec{D}$. The 4 dimensional volume corresponding to the parallelepiped will be $V_4\ =\ \varepsilon_{\alpha\beta\gamma\delta}A^{\alpha}B^{\beta}C^{\gamma}D^{\delta}$.  A "face" of this object will be a three dimensional volume, $\Sigma_{\alpha}\ =\ \varepsilon_{\alpha\beta\gamma\delta}B^{\beta}C^{\gamma}D^{\delta}$.  Gauss' Theorem now reads
+
+\begin{equation}
+  \int\ \partial_{\alpha}v^{\alpha}\ dV\ =\ \oint\ v^{\alpha}\ d\Sigma_{\alpha}
+\end{equation}
+Replacing the general 4-vector $\underline{\mathbf{v}}$ with our 4-number density, the divergence theorem gives a new way to represent the conservation law we intuitively arrived at.
+
+\begin{equation}
+  \oint\ N^{\alpha}\ d\Sigma_{\alpha}\ =\ 0
+\end{equation}
+This says the flux of the 4-number density through all Gaussian surfaces in space-time equals zero. "Whatever non-interacting material that flows into a spacetime volume will flow out of that spacetime volume". This expression can be expanded for spacetime coordinates $\underline{\mathbf{x}}\ =\ (x^0,\ x^1,\ x^2,\ x^3)\ =\ (t,\ \vec{x})$.
+
+\begin{equation}
+  \begin{aligned}
+    &\left (\int\ N^0\left (x^0_2\right )\ \varepsilon_{0\alpha\beta\gamma}\ dx^{\alpha}dx^{\beta}dx^{\gamma} \right.
+    \left. + \int\ N^0\left (x^0_1\right )\ \varepsilon_{0\alpha\beta\gamma}\ dx^{\alpha}dx^{\beta}dx^{\gamma} \right)_{
+    \mathit{time\ surfaces}\ x^0_i\ =\ f\left (x^1,\ x^2,\ x^3\right)}\\
+    +\
+    &\left (\int\ N^1\left (x^1_2\right )\ \varepsilon_{\alpha1\beta\gamma}\ dx^{\alpha}dx^{\beta}dx^{\gamma} \right.
+    \left. + \int\ N^1\left (x^1_1\right )\ \varepsilon_{\alpha1\beta\gamma}\ dx^{\alpha}dx^{\beta}dx^{\gamma} \right)_{
+    \mathit{x^1\ surfaces}\ x^1_i\ =\ f\left (x^0,\ x^2,\ x^3\right)}\\
+    +\ &...\ =\ 0
+  \end{aligned}
+\end{equation}
+In Minkowski space, where we set up an orthogonal basis, where $dx^{\alpha}$ points in a unit direction, many terms drop out of the formula, allowing us to write the equation without the Levi-Civita nor the hidden Einstein summation of terms.  Re-define the spacetime coordinates as $\underline{\mathbf{x}}\ =\ (t,\ x,\ y,\ z)$ to simplify.
+
+\begin{equation}
+  \begin{aligned}
+    &\left (\int\ N^0\left (t_2\right )\  dxdydz\ +\ \int\ N^0\left (t_1\right )\  dxdydz\right)\\
+    +\ &\left (\int\ N^1\left (x_2\right )\  dtdydz\ +\ \int\ N^1\left (x_1\right )\  dtdydz\right)\\
+    +\ &\left (\int\ N^2\left (y_2\right )\  dtdxdz\ +\ \int\ N^2\left (y_1\right )\  dtdxdz\right)\\
+    +\ &\left (\int\ N^3\left (z_2\right )\  dtdxdy\ +\ \int\ N^3\left (z_1\right )\  dtdxdy\right)\\
+    =\ &0
+  \end{aligned}
+\end{equation}
+We know that the direction of $\underline{\mathbf{N}}$ is going from an earlier time $t_1$ to a later time $t_2$, so there is a sign change, as the 4-number density "races towards" the surface of constant time $t_1$.  Let's also imagine that this 4-D box is shrinking along the time axis, so that $t_2\ =\ t_1\ +\ dt$.  Taking this into account and rearranging the "time" terms on the LHS and the "space" terms on the RHS gives the following:
+
+\begin{equation}
+  \begin{gathered}
+    \left (\int\ N^0\ dxdydz\right )_{t_1\ +\ dt}\ -\ \left (\int\ N^0\ dxdydz\right )_{t_1}\ =\ \\
+    -\left [\left (\int\ N^1\ dydz\right )_{x_2}\ -\ \left (\int\ N^1\ dydz\right )_{x_1}\ +\ \right.
+    \left. \left (\int\ N^2\ dxdz\right )_{y_2}\ -\ \left (\int\ N^2\ dxdz\right )_{y_1}\ +\ \right.
+    \left. \left (\int\ N^3\ dxdy\right )_{z_2}\ -\ \left (\int\ N^3\ dxdy\right )_{z_1}\right ]\ dt
+  \end{gathered}
+\end{equation}
+Divide both sides by $dt$ and take the limit $dt\rightarrow0$ and we can see that this is a relationship between the time derivative of one term (LHS) and a dot product of spatial terms (RHS).
+
+\begin{equation}
+  \frac{\partial}{\partial t}\int\ n\ dV\ =\ -\oint\ \vec{n}\cdot\ d\vec{a}
+\end{equation}
+Notice that this is true only after one chooses the Minkowski coordinate system to observe the dust.
+
+\hskip 25pt Another important example of matter is an electric current.  Analogous to the dust's 4-number density, the 4-current density can be written in terms of the charge density (time piece) and the charge density moving with some speed through a volume of 3-D space according to some inertial observer (space piece).  The charge density will be $\rho$ and the current density will be $\vec{J}\ =\ \rho\vec{v}$.
+
+\begin{equation}
+  \underline{\mathbf{J}}\ =\ \left (\rho,\ \vec{J}\right )\ =\ \rho\underline{\mathbf{u}}
+\end{equation}
+Likewise, it has a conservation rule.
+
+\begin{equation}
+  \frac{\partial\rho}{\partial t}\ =\ -\vec{\nabla}\cdot\vec{J}
+\end{equation}
+$$\mathit{or}$$
+
+\begin{equation}
+  \partial_{\alpha}J^{\alpha}\ =\ 0
+\end{equation}
+When thinking about describing electromagnetism in a space-time way, similar to the conservation law, there is a small problem with constructing more simple 4-vectors to use.  The problem is that if one wanted to make a useful object out of the standard 3-vector way of thinking about $E$ and $B$ fields, it would be tough to construct two separate 4-vectors.  Maybe a tensor?  If the tensor only had 6 input components, then that could work.  A typical tensor would have 16 components.  If the tensor was symmetric, we would be down to only 10.  Thats a start, but still not good enough. If we had an antisymmetric tensor, the diagonal elements would be zero, leaving only 6 elements in total to worry about. This gives us a tip that electromagnetism can be described with some antisymmetric tensor.  This is already well established, but it is useful to have some intuition as to why it works.  The Maxwell tensor is defined as $\underline{\underline{\mathbf{F}}}$.
+
+\begin{equation}
+  F^{\mu\nu}\ =\
+  \begin{pmatrix}
+    0 & E_x & E_y & E_z \\
+    -E_x & 0 & B_z & -B_y \\
+    -E_y & -B_z & 0 & B_x \\
+    -E_z & B_y & -B_x & 0 
+  \end{pmatrix}
+\end{equation}
+where Maxwell's equations can be written in terms of derivatives of the Tensor components.
+
+\begin{gather}
+  \partial_{\mu}F^{\mu\nu}\ =\ -\mu_0J^{\nu} \\
+  \partial_{\lambda}F_{\mu\nu}\ +\ \partial_{\nu}F_{\lambda\mu}\ +\ \partial_{\mu}F_{\nu\lambda}\ =\ 0
+\end{gather}
+The conservation of current is a built-in feature of writing Maxwell's equations in this way.  Looking at the divergence of the current density from the first of Maxwell's equations in this differential form, we get
+
+\begin{equation}
+  \begin{aligned}
+    \mu_0\partial_{\mu}J^{\mu}\ &=\ \partial_{\mu}\partial_{\nu}F^{\mu\nu} \\
+    &=\ \partial_{\nu}\partial_{\mu}F^{\nu\mu} \\
+    &=\ -\partial_{\nu}\partial_{\mu}F^{\mu\nu} \\
+    &=\ -\partial_{\mu}\partial_{\nu}F^{\mu\nu} \\
+    \therefore \partial_{\mu}J^{\mu}\ &=\ 0
+  \end{aligned}
+\end{equation}
+This computation also reveals something in general about a contraction between antisymmetric ($\underline{\underline{\mathbf{A}}}$) and symetric tensors ($\underline{\underline{\mathbf{S}}}$).
+
+\begin{equation}
+  A^{\mu\nu}S_{\mu\nu}\ \equiv\ 0
+\end{equation}

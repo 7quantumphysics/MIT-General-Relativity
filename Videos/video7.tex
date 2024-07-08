@@ -1,0 +1,167 @@
+\section*{Video 7: The Principle of Equivalence Continued; Parallel Transport}
+\hskip 25pt When we have gravity we cannot cover all of space-time with an inertial frame like we can in
+Special Relativity.  One feature of gravity is redshifted light when light travels away from a gravitational source.
+This reshifting phenomena has been experimentally measured and proved to exist.  A fun thought experiment in which
+gravitational redshift manifests is to think about dropping a rock with rest energy $m$ from a height $y$ here near
+the surface of the Earth on top of a hill.  For the fun part of the thought experiment, imagine that there is a device,
+a photonulator, at the bottom of the hill that can convert the rock into a raw photon.  Lets also assume that this device
+managed to convert all of the rock's energy the moment before hitting the ground.  This means that the fallen rock will
+have all of its energy converted to that of a photon at the last moment before impact
+(Again, remember that we're using natural units.  )
+\begin{equation}
+  m\ \rightarrow\ m\ +\ mgy\ =\ \rightarrow \omega_{\mathit{fall}}
+\end{equation}
+If this photon was completely and perfectly reflected back up the hill, assuming no loss of energy of the photon during the
+reflection, the photon will travel back with the kinetic energy (and rest energy) of the rock.
+\begin{equation}
+  E_{\mathit{photon}}\ =\ \omega_{\mathit{fall}}\ =\ m\ +\ mgy
+\end{equation}
+If the photon went back up the hill and entered into a "re-rockalizer", to convert the photon back into the rock that we
+dropped in the first place, there would be a difference in energy between when the rock was initially dropped and anytime the
+rock came back up as a photon.  This is because the photon is now carrying the energy of the rest particle, but also the
+gravitational potential energy that the rock initially converted to kinetic energy.  The rock could even be interpreted as
+having more mass when it comes back vs. what it started with before falling.  This thought experiment dilemma is resolved by
+allowing the frequency of the returning light to be lower than the frequency of the "falling" light.  This frequency change
+would be determined by the gravitational potential.  The light moving away from the pull of gravity would be
+\begin{equation}
+  \omega_{\mathit{rise}}\ =\ \omega_{\mathit{fall}}\left (1\ -\ gy\right )
+\end{equation}
+$$ \mathit{NOTE:}\ This\ Argument\ has\ Issues!!! $$
+
+\hskip 25pt Despite the wierd (and probably wrong) argument here, gravitational redshift is an established fact that also has
+a more solid theoretical framework.  Now, suppose that there was a large region of space-time that could be covered by a
+single Lorentz frame.  Thinking about the light that climbs out of a gravitational potential well, we know experimentally
+that the light changes in energy.  But, taking small snapshots of the photon from one region of space-time to the next in this
+frame would show that they are identical.  The photon in one snapshot cannot be the same as the photon in the other if the
+energy is changing.  The energy is changing, therefore the frequency is changing, therefore the period is changing.  This just
+shows that we cannot think about global coordinates on a large lorentz frame when thinking about gravity and how it effects
+other things.  The Lorentz frames are designed to specify inertial observers, but gravity does not allow for
+inertial observers.  This means that we cannot describe space-time globally with gravity, but we can describe it
+locally.  From Einstein's prospective, the next best thing to describe, rather than an inertial frame, was a freely
+falling frame.  Objects that are freely falling with respect to other freely falling objects, that are also assumed to not
+be effecting each other gravitationally in a noticable way, "appear" to be in an inertial frame.  In other words, the
+net force acting on those objects in the freely falling frame amounts to zero.  This makes sense because the frame itself
+is required to accelerate with the object in a free fall frame of reference.  The one caveat is that tides breakdown
+the notion of inertial freely falling frames.  This shows that, in order to think about space-time for freely falling
+frames, we need to think about local regions of space-time when dealing with gravity.
+
+\hskip 25pt Let $\underline{\mathbf{x}}$ be our starting coordinates with the metric $g_{\alpha\beta}$.  Let there be
+another set of coordinates $\underline{\mathbf{y}}$ in which space-time is locally flat in the vicinity of some event $P$.
+Assume that there is a mapping between these two sets of coordinates,
+$x^{\alpha}\ =\ x^{\alpha}\left(\underline{\mathbf{y}}\right)$, allowing a transformation between the two.
+\begin{equation}
+  L^{\alpha}_{\mu}\ =\ \frac{\partial x^{\alpha}}{\partial y^{\mu}}
+\end{equation}
+The goal is to find a coordinate system such that
+$$ g_{\mu\nu}\ =\ L^{\alpha}_{\mu}L^{\beta}_{\nu}g_{\alpha\beta}\ \equiv\ \eta_{\mu\nu} $$
+over as large of a region as possible.  First, recognize that these are all functions.  We can expand these functions as a
+Taylor series about the event $P$.  It is reasonable to do this because we expect the metric to be locally equal to the
+Minkowski metric.  The coordinate transformation can be whatever we choose.
+\begin{equation}
+  g_{\alpha\beta}\ \approx\ g_{\alpha\beta}\mathbf{|_P}\ +\
+  \left (x^{\gamma}\ -\ y^{\gamma}_P\right )\partial_{\gamma}g_{\alpha\beta}\mathbf{|_P}\ +\
+  \frac{1}{2}\left (x^{\gamma}\ -\ y^{\gamma}_P\right )\left (x^{\sigma}\ -\ y^{\sigma}_P\right )
+  \partial_{\gamma}\partial_{\sigma}g_{\alpha\beta}\mathbf{|_P}
+\end{equation}
+\begin{equation}
+  L^{\alpha}_{\mu}\ \approx\ L^{\alpha}_{\mu}\mathbf{|_P}\ +\
+  \left (x^{\gamma}\ -\ y^{\gamma}_P\right )\partial_{\gamma}L^{\alpha}_{\mu}\mathbf{|_P}\ +\
+  \frac{1}{2}\left (x^{\gamma}\ -\ y^{\gamma}_P\right )\left (x^{\sigma}\ -\ y^{\sigma}_P\right )
+  \partial_{\gamma}\partial_{\sigma}L^{\alpha}_{\mu}\mathbf{|_P}
+\end{equation}
+Before continuing with the computation, its important to take note of the constraints and the degrees of freedom.  The
+metric $g_{\alpha\beta}$ is what's given, so this metric, along with its first and second derivatives are the constraints.
+Since we are free to choose the new set of coordinates to be whatever we like, the transformation matrix and its
+first and second derivatives are the degrees of freedom.  
+\begin{equation}
+  L^{\alpha}_{\mu}L^{\beta}_{\nu}g_{\alpha\beta}\ \approx\
+  \left(L^{\alpha}_{\mu}\mathbf{|_P}\right)\left(L^{\beta}_{\nu}\mathbf{|_P}\right)\left(g_{\alpha\beta}\mathbf{|_P}\right)\
+  +\ \left (x^{\gamma}\ -\ y^{\gamma}_P\right )\left(\mathit{First\ Order\ Terms}\right)\
+  +\ \frac{1}{2}\left (x^{\gamma}\ -\ y^{\gamma}_P\right )\left (x^{\sigma}\ -\ y^{\sigma}_P\right )
+  \left(\mathit{Second\ Order\ Terms}\right)
+\end{equation}
+
+\hskip 25pt At zeroth order, the first constraint is $g_{\alpha\beta}$.  Being a rank 2, 4 dimensional symmetric tensor,
+this gives $\mathbf{\mathit{Red}}(2,4)\ =\ 10$
+constraints.  The transformation matrix, on the other hand, is not symmetric.  This means there are 16 degrees of freedom
+to ensure the 10 constraints are satisfied.  This means that, at zeroth order, we can easily satisfy the constraints
+(find a local Lorentz frame sufficiently close to event $P$).  The 6 additional degrees of freedom 'left over' are the
+three boosts and three rotations we expect.
+
+\hskip 25pt Next, at first order, the constraints are from derivatives of the metric
+$\partial_{\gamma}g_{\alpha\beta}$.  That's $4\cdot\mathbf{\mathit{Red}}(2,4)\ =\ 40$ constraints.  The
+first derivative of the transformation matrix, $\partial_{\gamma}L^{\alpha}_{\mu}$ is symmetric with respect to the
+bottom indices (as they are both referencing derivatives).  This will have degrees of freedom as the number of
+constraints that must be satisfied.
+
+\hskip 25pt Finally, at second order, the constraints are from a second order derivative of the metric, where indices from
+the derivatives are symmetric as well.  This gives $\mathbf{\mathit{Red}}^2(2,4)\ =\ 100$ constraints.  Whereas the
+degrees of freedom from the second order derivative of the transformation matrix (which looks like four symmetric
+rank 3, 4 dimensional tensors) are fewer than the constraints; $4\cdot\mathbf{\mathit{Red}}(3,4)\ =\ 80$ degrees of freedom.
+
+\hskip 25pt What this shows is that any metric can be described as flat space only up to second order corrections.
+\begin{equation}
+  g_{\mu\nu}\ =\ \eta_{\mu\nu}\ +\ \mathfrak{O}\left\{\partial^2g\right\}
+\end{equation}
+The second derivative of the metric is alluding to the definition of the curvature of the spacetime.  It turns out that the
+remaining 20 terms that are missing from the previous counting scheme are found in the Riemann curvature tensor.  The
+size of the spacetime region where this approximation method is effective is proportional to the inverse of a length scale.
+\begin{equation}
+  \ell\ \sim\ \frac{1}{\sqrt{\partial^2g}}
+\end{equation}
+
+\hskip 25pt Let's define what we mean by curved manifolds.  A curved manifold is one in which initially parallel
+trajectories do not remain parallel.  An easy to visualize example is that of the surface of a 2-sphere.  An interesting
+side note of a surface that LOOKS curved, but is not (by this definition) is the surface of a cylinder.  Imagine an
+infinitely long cylinder (no end caps) with initially parallel vectors on the surface.  The transport of those vectors will
+remain parallel throughout.  Another way to think of it is that you can find a way to perfectly flatten the cylinder's
+surface, or completely project the surface onto a 2D plane without "ripping" the surface, like what would need to be done
+for flattening the surface of a 2-sphere.
+
+\hskip 25pt We want a way to handle vectors and tensors in this curved spacetime.  One thing to help us is to realize
+the space that we're dealing with when we think of drawing vectors on a piece of paper.  The vectors are living in a
+tangent space; always tangent to the "surface" of the space they occupy.  So, what does that tell us about vectors along
+the surface of a 2-sphere?  Two vectors, at first glance, seem difficult to compare to one another depending on where these
+vectors are located on the sphere.  So, consider a curve, $\gamma$, that exists in a curved manifold.  Along
+$\gamma$ there exists two points, $P$ and $Q$, where $P\ =\ x^{\alpha}$ and $Q\ =\ x^{\alpha}\ +\ dx^{\alpha}$.  Now,
+suppose there is a vector field that fills this manifold.  The vector field $\mathbf{\underline{A}}$ has values
+$A^{\alpha}(P)$ and $A^{\alpha}(Q)$ at the points $P$ and $Q$ respectively.  We want to know how to take the derivative
+of the vector field from points $P$ to $Q$.  Let's start with the definition of a derivative as a first attempt.
+\begin{equation}
+  \partial_{\beta}A^{\alpha}\ =\ \frac{\partial A^{\alpha}}{\partial x^{\beta}}\ \equiv\
+  \lim_{dx^{\beta}\rightarrow0}\left\{\frac{A^{\alpha}(Q)\ -\ A^{\alpha}(P)}{dx^{\beta}}\right\}
+\end{equation}
+This seems to be ok, but a closer look (perhaps a picture on my part would make this more obvious) reminds us that
+$P$ and $Q$ do not share the same tangent space, as they exist along $\gamma$ in a given curved manifold.  This means that
+their basis vectors point in different directions, and thus the basis vectors will be changing along $\gamma$ in general
+as we try to compute the derivative.  One can still compute the derivative like this, but the result will not be a
+tensorial object, which is what we are after for the sake of physics.  A tensorial object would have the flexibility
+of being written in another coordinate basis, say $y^{\mu}$.
+\begin{equation}
+  \begin{aligned}
+    \partial_{\nu}A^{\mu}\ &=\ 
+    \frac{\partial A^{\alpha}}{\partial x^{\beta}}
+    \frac{\partial x^{\beta}}{\partial y^{\nu}}\frac{\partial y^{\mu}}{\partial x^{\alpha}} \\
+    &=\ \frac{\partial x^{\beta}}{\partial y^{\nu}}\frac{\partial y^{\mu}}{\partial x^{\alpha}}\partial_{\beta}A^{\alpha}
+  \end{aligned}
+  \label{eq:transform}
+\end{equation}
+For this argument, let's assume that $\mathbf{\underline{A}}$ is already a tensorial object, meaning
+\begin{gather}
+  A^{\mu}\ =\ \frac{\partial y^{\mu}}{\partial x^{\alpha}}A^{\alpha}\\
+  \partial_{\nu}\ =\ \frac{\partial x^{\beta}}{\partial y^{\nu}}\partial_{\beta}
+\end{gather}
+Carrying on with the math by substituting these two equations into the left hand side of Equation~\eqref{eq:transform} gives
+the following:
+\begin{equation}
+  \begin{aligned}
+    \frac{\partial x^{\beta}}{\partial y^{\nu}}\partial_{\beta}
+    \left[\frac{\partial y^{\mu}}{\partial x^{\alpha}}A^{\alpha}\right] &\stackrel{?}{=}\ \mathit{R.H.S.} \\
+    \frac{\partial x^{\beta}}{\partial y^{\nu}}\frac{\partial y^{\mu}}{\partial x^{\alpha}}\partial_{\beta}A^{\alpha}\ +\
+    \frac{\partial x^{\beta}}{\partial y^{\nu}}\frac{\partial^2y^{\mu}}{\partial x^{\alpha}\partial x^{\beta}}A^{\alpha}\ 
+    &\neq\ \mathit{R.H.S.}
+  \end{aligned}
+\end{equation}
+which shows that there is an extra term that makes this derivative not a tensor.  A way of fixing this issue is to have the
+two vectors at the same point.  So, to take the derivative of the vector field between these two points, we need to first
+transport $A^{\alpha}(P)$ to $A^{\alpha}(Q)$.  The first notion of transportation is called "parallel transport".

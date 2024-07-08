@@ -1,0 +1,293 @@
+\section*{Video 5: The Stress Energy Tensor and the Christoffel Symbol}
+\hskip 25pt Continue to imagine a cloud of dust in space where each particle of the dust has a rest mass $m$.  In the rest
+frame of the dust element, its rest energy density is the density of the dust in that particular volume of space.
+\begin{equation}
+  \rho_0\ \circeq\ mn_0
+\end{equation}
+Now, lets boost into a new frame moving with vecloity $\vec{v}$ with respect to the dust.  The energy density in this boosted
+frame is changed.  First, the energy of the individual moving particles gets a $\gamma$ factor from their kinetic energy in
+this new frame.  Second, the space (volume) gets contracted, which gives the number density a factor of $\gamma$ as well.
+\begin{equation}
+  \begin{aligned}
+    \rho\ &=\ \gamma m\gamma n_0 \\
+    &=\ \gamma^2\rho_0
+  \end{aligned}
+\end{equation}
+If $\rho$ was a 4-vector component, it would not transform with higher order powers of $\gamma$, which means it can't be
+part of a Lorentz vector (nor scalar).  One other thing to recognize is that the energy density is built with a combination
+of two time-like components, namely the energy component of momentum $\underline{\mathbf{p}}$ and the number density
+component of the number vector $\underline{\mathbf{N}}$.  This means that $\rho$ can be written as
+\begin{equation}
+  \rho\ =\ p^0N^0\ \equiv\ T^{00}
+\end{equation}
+which implies that it is a part of some tensor.  Let's write this tensor as the tensor product of the two 4-vectors.
+\begin{equation}
+  \begin{aligned}
+    \underline{\underline{\mathbf{T}}}\ &=\ \underline{\mathbf{p}}\ \bigotimes\ \underline{\mathbf{N}} \\
+    &=\ mn\ \underline{\mathbf{u}}\ \bigotimes\ \underline{\mathbf{u}} \\
+    &=\ \rho\ \underline{\mathbf{u}}\ \bigotimes\ \underline{\mathbf{u}}
+  \end{aligned}
+\end{equation}
+A component of this tensor is written with two indices.
+\begin{equation}
+  \begin{aligned}
+    T^{\mu\nu}\ &=\ p^{\mu}N^{\nu}\\
+    &=\ \rho u^{\mu}u^{\nu}
+  \end{aligned}
+\end{equation}
+This can physically be interpreted as the flux of the momentum component $p^{\mu}$ in the $x^{\nu}$ direction.  With
+this interpretation, it is worth examaning the components of the tensor this way.
+\begin{gather}
+  T^{00}\ \equiv\ \mathit{flux\ of\ energy\ density\ in\ time\ "direction"} \\
+  T^{0i}\ \equiv\ \mathit{flux\ of\ energy\ density\ in\ the}\ x^i\ \mathit{direction}\
+  (\mathit{through\ the}\ x^j\wedge x^k\ \mathit{plane}) \\
+  T^{i0}\ \equiv\ \mathit{flux\ of\ momentum\ density\ in\ time\ "direction"} \\
+  T^{ij}\ \equiv\ \mathit{flux\ of}\ p^i\ \mathit{in\ the}\ x^j\ \mathit{direction}\ 
+  (\mathit{units\ of\ pressure\ for}\ i=j\ \mathit{and\ shear\ for}\ i\neq j)
+\end{gather}
+There is a symmetry to take note of, which is made apparent by writing it in terms of its components.  I'll choose to
+write it in terms of the velocity components.
+\begin{gather}
+  T^{00}\ =\ \gamma^2\rho_0 \\
+  T^{0i}\ =\ \gamma^2\rho_0v^i \\
+  T^{i0}\ =\ \gamma^2\rho_0v^i \\
+  T^{ij}\ =\ \gamma^2\rho_0v^iv^j
+\end{gather}
+This tensor $\underline{\underline{\mathbf{T}}}$ is called the Stress, Energy, Momentum tensor.  
+The symmetry of $\underline{\underline{\mathbf{T}}}$ has been shown for dust.  In general, this tensor is
+symmetric for all known physical structures in space-time (this is not proven here, but I suppose a rigorous
+proof can be found if one wants one).  To deduce what $\underline{\underline{\mathbf{T}}}$ looks like, for some material
+being studied, we can apply the physical meaning of the tensor's individual components and construct it from there.  Remember,
+we extracted the physical meaning of the components $T^{\mu\nu}$ from examining how dust behaves in inertial frames of
+reference.
+
+\hskip 25pt For a new example, lets look at a perfect fluid.  This is a fluid where there is no energy flow in
+some frame w.r.t. the fluid and no lateral stresses (basically no viscosity).  As a neat "example" of a perfect fluid, one
+can think of "dry" water.  The physics of such a fluid will be described by its energy density, $\rho$, and its
+pressure, $P$.  Lets also assume that the pressure is isotropic to space (the pressure is the same in all three directions).
+In this frame of a perfect fluid, the momentum tensor only has four components.
+\begin{equation}
+  T^{\mu\nu}\ =\ 
+  \begin{pmatrix}
+    \rho & 0 & 0 & 0 \\
+    0 & P & 0 & 0 \\
+    0 & 0 & P & 0 \\
+    0 & 0 & 0 & P \\
+  \end{pmatrix}
+\end{equation}
+Picking out the rest frame of the fluid to be the frame of reference in question, where there is no energy flow,
+$T^{00}$ is expressed in terms of the density and the four-velocity as the "dust" is described in the previous example.
+\begin{equation}
+  T^{00}\ =\ \rho\ \underline{\mathbf{u}}\ \bigotimes\ \underline{\mathbf{u}}
+\end{equation}
+The other three components are diagonal spatial terms which can be expressed with the Minkowski metric times the pressure
+term.  The only caveat is that writting the pressure as this multiplication requires that we get rid of the extranuous
+"time" component by adding a pressure term to $T^{00}$ we just defined.  (We add it because we are working with a metric
+signature where the time element carries a minus sign in the metric)
+\begin{gather}
+  \underline{\underline{\mathbf{T}}}\ =\
+  \left(\rho\ +\ P\right)\
+  \underline{\mathbf{u}}\ \bigotimes\ \underline{\mathbf{u}}\ +\ P\underline{\underline{\mathbf{\eta}}} \\
+  T^{\mu\nu}\ =\ \left(\rho\ +\ P\right)u^{\mu}u^{\nu}\ +\ P\eta^{\mu\nu}
+\end{gather}
+At some point we want to be able to express this tensor for a perfect fluid in a general space-time and not just a
+Minkowski space-time.  For now, this is good enough for an intuition.
+
+\hskip 25pt Let's consider the physics involving $\underline{\underline{\mathbf{T}}}$.  Think of a cube of
+length $l$ submerged in a fluid in space.  We align the faces of the cube such that the normal vectors of the faces of
+the cube are parallel with the usual basis of Cartesian unit vectors $\hat{e}^{i}$.  The pressure will be the
+force of the fluid acting on each face (surface area) of the cube.  The force on a face of the cube is given classically as
+\begin{align*}
+  \vec{F}_{\mathit{on\ face\ whose\ normal\ vector\ is}\ \hat{n}}\ &=\ \int\ \vec{P}_n da_n \\
+  &=\ \int\
+  \left (P_x\hat{x}\ +\ P_y\hat{y}\ +\ P_z\hat{z}\right )_n da_n
+\end{align*}
+which can be written in terms of components $T^{ij}$.  The area, $a$, of each face is $l^2$.  For each of the 6 faces of
+the cube, the force is found to be
+\begin{gather}
+  \vec{F}\ =\ \mathbf{T}da_n \\
+  F^i\ =\ \pm T^{in}l^2;\ n=\{1,\ 2,\ 3\}
+\end{gather}
+where $-$ represents a pressure acting on the outside of the cube, compressing it, and $+$ represents a pressure of the fluid
+flowing from the inside of the cube to the outside, if the cube allows for the fluid to flow through it.
+The letter $n$ indicates the Cartesian direction parallel with the normal vector $\hat{n}$ of the face of the cube in
+question.  In this fluid, the
+net force on the cube is zero.  If the fluid can flow through the cube, the net flux is also zero.  This is expected.  An
+interesting way to give a physical argument for the spatial symmetry of $T^{ij}$ is to consider torques and moments of
+inertia of this cube, still submersed in this fluid.  Let's assume a axis of rotation to be passing through the center of
+the cube, aligned in the $\hat{e}^k$ direction (so the cube can rotate in the $ij$ plane).  Define $\vec{r}$ to point from
+the origin to the axis of rotation at the center of the cube and $\vec{r}'$ to point from the origin to a point on the
+surface of the cube that will be rotating about the axis.  We can define a new variable,
+$\vec{r}_c\ =\ \vec{r}\ -\ \vec{r}'$, so that we can define the torque of a point on a face of the cube.
+\begin{equation}
+  \vec{\tau}\ =\ \vec{r}_c\ \times\ \vec{F}
+\end{equation}
+When writing the components of the torque, it's worth noting that $\vec{r}_c$ will always be pointing in the general
+direction of the unit normal vector of the face in question ($\vec{r}_c\cdot\hat{n}>0$).  This means that $n$ will be
+restricted to which face of the cube you choose to calculate the torque with.  To phrase this in a more direct way,
+the number $n$ will equal the index chosen for the component of $\vec{r}_c$ in the calculation.  For example, if the
+calculation requires the $i^{th}$ component of $\vec{r}_c$, then $n\equiv i$.  With this in mind, the torque of a
+point on a face of the cube about and axis parallel to one of the three Cartesian coordinate axes is written component
+wise as follows:
+\begin{equation}
+  \begin{aligned}
+    \tau_k\ &=\ \pm\epsilon_{ijk}r_c^iF^j \\
+    &=\ \pm\epsilon_{ijk}r_c^iT^{ji}l^2
+  \end{aligned}
+\end{equation}
+where $l^2$ is the length of the cube squared (as to not confuse this exponent for one of the indices).  So, suppose I
+wanted the $z$ component of this torque.  I can write my indices in terms of $x$, $y$ and $z$ now for the sake of
+simplicity.
+\begin{equation}
+  \tau_z\ =\ \pm\left (r_c^xT^{yx}\ -\ r_c^yT^{xy}\right )l^2
+\end{equation}
+To simplify this further, lets also choose $\vec{r}_c$ such that $r_c^x\ =\ r_c^y\ =\ l/\sqrt{2}$.
+\begin{equation}
+  \tau_z\ =\ \pm\frac{1}{\sqrt{2}}\left (T^{yx}\ -\ T^{xy}\right )l^3
+\end{equation}
+This shows that if the tensor is symmetric, then the torque completely vanishes.  Even if it wasn't, the torque would still
+rapidly vanish as the size of the cube shrinks to zero.  This isn't surprising.  
+
+\hskip 25pt Finally, lets consider the moment of inertia of this cube about the same axis we defined the torque.  The
+inertia is
+\begin{equation}
+  I\ =\ \int\ \vec{r}_c\cdot\vec{r}_c\ dm
+\end{equation}
+The exact solution to this integral is not necessary.  What's important to get out of this is the form of the inertia.
+\begin{equation}
+  I\ \propto\ l^2\rho l^3\ =\ \rho l^5
+\end{equation}
+This is the cool part of the physics that's been being built towards.  Remember that the torque is related to the
+moment of inertia in a similar way that force is related to mass.  Also, notice that as $l\rightarrow0$ the
+torque dies off as $l^3$, but the inertia dies off more rapidly as $l^5$.  If we check the angular acceleration of the
+cube, we find that it is inversly related to the length of the cube.
+\begin{equation}
+  \ddot{\varphi}\ \propto\ \frac{T^{yx}\ -\ T^{xy}}{l^2}
+\end{equation}
+Assuming that the spatial tensor components were not symmetric, this would describe some angular acceleration term that
+would exist on small scales $l << 0$.  Imagine if the molecules in a cup of water were to spontanously begin to spin and
+rotate faster and faster for no obvious reason other than the stress energy not having symmetric terms.  Because we don't
+see this behavior in nature, we can use this as good motivation for saying that the stress energy tensor is symmetric.
+This example gives us a physical intuition about the symmetry of the spatial components, but again, another
+derivation of the stress energy tensor reveals the symmetry of the tensor in a more rigorous way, in both spatial and
+temporal components.  
+
+\hskip 25pt Its important to bring up the conservation of energy and momentum, as a great deal of physics understanding
+hinges on these two conservation laws.  In terms of the stress-energy-momentum tensor, this single tensor is a conserved
+quantity.  When defining the tensor from a field theory perspective, one can prove the conservation law directly.
+\begin{equation}
+  \partial_{\mu}T^{\mu\nu}\ =\ 0
+\end{equation}
+This is similar to Maxwell's Equations in covariant form.
+\begin{equation}
+  \partial_{\mu}F^{\mu\nu}\ =\ -\mu_0J^{\mu}
+\end{equation}
+The main difference is that there is no vector "source" term for the variation of the stress-energy-momentum terms.
+I suppose if one finds this strange acceleration in nature, this would prove that our theories need to be
+re-structured to allow for the non-conservation of energy and momentum!
+
+\hskip 25pt  Let's consider yet another common example of matter; lets consider a point mass, $m_0$ moving along a
+world line in space-time.  The world line will be some four-vector of position parametrized by the proper time of the
+mass moving along that world line.  The world line will be represented as $\underline{\mathbf{x}}(\tau)$.  To represent
+the stress-energy-tensor of this point mass it's beneficial to make use of the delta function and write it in terms of
+the mass/energy density.  Indicate the location of the point mass with an apostrophe (').  To start, we know the first
+element of the tensor is the same as that of the dust.
+\begin{equation}
+  T^{00}\ =\ \rho u^0u^0;\ \ [\rho]\ =\ \frac{\mathit{mass}}{\mathit{length}^3}
+\end{equation}
+For the point mass in Euclidean space the mass density is described as
+\begin{equation}
+  \rho\ =\ m_0\delta^3\left (\vec{x}\ -\ \vec{x}'\right );\ \ [\rho]\ =\ \frac{\mathit{mass}}{\mathit{length}^3}
+\end{equation}
+but we want an expression for space-time that will adhere to the correct dimensions for $\rho$.  The space-time
+delta function will carry a temporal dimension for any observer in any reference frame.  Again, these space-time
+coordinates for the point mass are chosen to be expressed as a function of proper time.  Therefore, this mass
+density with the space-time delta function must be integrated over all of "proper" time.  This also maintains the
+dimensionality of $\rho$ when given the 4D space-time delta function.
+\begin{equation}
+  \rho\ =\ m_0\int\ \delta^4\left (\underline{\mathbf{x}}\ -\ \underline{\mathbf{x}}'\right )\ d\tau;\ \ 
+  [\rho]\ =\ \frac{\mathit{mass}}{\mathit{length}^3\times\mathit{time}}\times\mathit{time}
+\end{equation}
+We can express $\underline{\underline{\mathbf{T}}}$ of the point mass the same way we expressed the tensor for dust.  The
+only difference is that the Dirac Delta function is serving a role here in place of the number density, since this point
+mass is obviously the only mass in question.
+\begin{equation}
+  T^{\mu\nu}\ =\ m_0\int\ u^{\mu}u^{\nu}\delta^4\left (\underline{\mathbf{x}}\ -\ \underline{\mathbf{x}}'\right )\ d\tau
+\end{equation}
+As a calculus reminder of integrals with delta functions,
+\begin{equation}
+  \int\ f(x)\delta\left (g(x)\right )\ dx\ =\ \sum_{i=1}^N\frac{f(x_i)}{g'(x)|_{x=x_i}}\ |_{x_i=x_0}
+\end{equation}
+where $x_0$ are the $N$ roots of $g(x)$ and $g'(x)$ is the first derivative with respect to $x$.
+With this in mind, lets solve the integral over the proper time, choosing one of the four delta functions to work with.
+\begin{equation}
+  \int\ \left [u^{\mu}u^{\nu}\delta^3
+    \left (\vec{x}(\tau)\ -\ \vec{x}(\tau)'\right )\right ]\delta\left (t\ -\ \tau\right )\ d\tau\ =\
+  \frac{u^{\mu}u^{\nu}\delta^3\left (\vec{x}(t)\ -\ \vec{x}(t)'\right )}{1}
+\end{equation}
+Here, this $1$ in the denominator (again, in natural units) is the zeroth component of the mass' 4-velocity in it's frame
+of reference.  The final form of the stress-energy-momentum tensor for the point mass can now be written without that
+integral.
+\begin{equation}
+  T^{\mu\nu}\ =\ \frac{m_0}{u^0}u^{\mu}u^{\nu}\delta^3\left (\vec{x}(t)\ -\ \vec{x}(t)'\right )
+\end{equation}
+To breifly summarize the introduction of the stress-energy-momentum tensor, we derived three examples listed
+below.
+
+-----------------------------------------------------------------------------------------------------------------------------
+\begin{gather}
+  T_{\mathit{non-interacting\ dust}}^{\mu\nu}\ =\ \rho u^{\mu}u^{\nu} \\
+  T_{\mathit{perfect\ fluid}}^{\mu\nu}\ =\ \left(\rho\ +\ P\right)u^{\mu}u^{\nu}\ +\ P\ \eta^{\mu\nu} \\
+  T_{\mathit{point\ mass}}^{\mu\nu}\ =\ \frac{m_0}{u^0}u^{\mu}u^{\nu}\delta^3\left (\vec{x}(t)\ -\ \vec{x}(t)'\right )
+\end{gather}
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+\hskip 25pt Let's consider the classical field equation for Newtonian gravity.  
+\begin{equation}
+  \nabla^2\Phi\ =\ 4\pi G\rho
+\end{equation}
+Recall that $\rho$ is just one component of a tensor.  For a better theory of gravity, we should not choose to
+pick out this one term out of the other 15 terms of the tensor.  This means we should seek an equation that looks like
+this classical differential equation, but with $T^{\mu\nu}$ on the RHS.  This idea will be brought up again later.  We
+bring it up because we have at least began to get a feel for the stress-energy-momentum tensor, so we should keep gravity
+in mind in how it will be connected with this tensor.
+
+\hskip 25pt As an introduction into curved space-time, let's first start with "simple" Minkowski space-time defined in
+curvilinear coordinates.  In traditional Cartesian coordinates, our 4-vector coordinates are given as
+$\underline{\mathbf{x}}\ =\ (t,\ x,\ y,\ z)$.  In this basis, the differential of the 4-vector can be written simply as
+contractions with the basis vectors with straightforward understanding.
+\begin{equation}
+  \underline{\mathbf{dx}}\ =\ dx^{\mu}\hat{e}_{\mu}
+\end{equation}
+The easiest way to switch to curvilinear coordinates is to change to cylinderical coordinates with the usual mapping.  
+$\underline{\mathbf{x}}\ =\ (t,\ r,\ \varphi,\ z)$.  In this basis, the differential of the 4-vector is written the same
+way, but unit analysis of the angular piece, $dx^2\hat{e}_2\ \equiv\ d\varphi\ \widehat{\varphi}$, shows that the unit vector
+$\widehat{\varphi}$ must carry the dimensionality of length to make the displacement vector make sense.  This shows that these
+coordinates are not a "straightforward" basis.  In a more math oriented way of putting it, the basis vectors are not
+always necessarily normalized.  For the cylindrical coordinates, $\widehat{\varphi}\cdot\widehat{\varphi}\ \neq\ 1$.  With
+two different coordinate systems established, its worth understanding how to transform from one set of coordinates to
+another in a general sense.  Lets define the transformation from one coordinate system, $\underline{\mathbf{x}}$
+(say Cartesian coordinates), to another coordinate system, $\underline{\widetilde{\mathbf{x}}}$ (say cylinderical coordinates).
+\begin{equation}
+  L^{\alpha}_{\mu}\ =\ \frac{\partial x^{\alpha}}{\partial\tilde{x}^{\mu}}
+\end{equation}
+For these two specific coordinate systems, the form of $\underline{\underline{\mathbf{L}}}$ can be written as a matrix.
+\begin{equation}
+  \underline{\underline{\mathbf{L}}}\ =\
+  \begin{pmatrix}
+    1 & 0 & 0 & 0 \\
+    0 & \cos\varphi & \sin\varphi & 0 \\
+    0 & -r\sin\varphi & \cos\varphi & 0 \\
+    0 & 0 & 0 & 1 
+  \end{pmatrix}
+\end{equation}
+\begin{equation}
+  \underline{\underline{\mathbf{L}}}^{-1}\ =\
+  \begin{pmatrix}
+    1 & 0 & 0 & 0 \\
+    0 & \cos\varphi & -\sin\varphi/r & 0 \\
+    0 & \sin\varphi & \cos\varphi/r & 0 \\
+    0 & 0 & 0 & 1 
+  \end{pmatrix}
+\end{equation}

@@ -1,0 +1,25 @@
+\section*{Video 8: Lie Transport, Killing Vectors, Tensor Densities}
+
+\hskip 25pt What has been shown in the last video is that the partial derivative of a tensor does not produce another
+tensor, which is what we expect from several different arguments: visually, algebraically and remembering the necessity
+of the Cristoffel symbols for appropriate derivatives of tensors to account for general curvilinear coordinate bases.  A
+proper way to differentiate the vector field between two close points is to parallel transport one vector to the other and
+then perform the differentiation as you'd expect.  Using the same example as the previous video (section), let's transport
+the vector from point $P$ to point $Q$.  The parallel transport of the vector is done to preserve its tensorial nature.
+Lets assume that we can define an object $\mathfrak{T}^{\alpha}_{\beta\mu}$ that allows us to write the transported vector
+as a difference between the vector at the original point and the infinitesimal distance each component of the vector was moved
+to reach the next point.  We will define this transported vector from $P$ to $Q$ as $A_T^{\alpha}(P\rightarrow Q)$
+\begin{equation}
+  A_T^{\alpha}\left(P\rightarrow Q\right)\ =\ A^{\alpha}\left(P\right)\ -\
+  \mathfrak{T}^{\alpha}_{\beta\mu}dx^{\beta}A^{\mu}
+\end{equation}
+With the vector "transported", the derivative, which we will label with a capital letter D, is now straightforward.
+\begin{equation}
+  \begin{aligned}
+    \mathfrak{D}_{\beta}A^{\alpha}\ &\equiv\
+    \lim_{dx^{\beta}\rightarrow0}
+    \left\{\frac{A^{\alpha}\left(Q\right)\ -\ A_T^{\alpha}\left(P\rightarrow Q\right)}{dx^{\beta}}\right\}\\
+    &=\ \partial_{\beta}A^{\alpha}\ +\ \mathfrak{T}^{\alpha}_{\beta\mu}A^{\mu}
+  \end{aligned}
+\end{equation}
+In this notation $\mathfrak{T}^{\alpha}_{\beta\mu}$, in general, is known as "the connection" term.
