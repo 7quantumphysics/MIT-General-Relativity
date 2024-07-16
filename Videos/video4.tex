@@ -9,7 +9,7 @@ $$\mathit{and}$$
 \begin{equation}
   \underline{\mathbf{u}}\ \circeq\ \left (1,\ 0\right )
 \end{equation}
-as measured by the "stationary" observer where any vector $\underline{\mathbf{A}}$ will represent a 4-vector, $\vec{A}$ will be a standard 3-vector and natural units ($\hbar=c=1$) will be used unless explicity written otherwise.  Similarly, the 4-momentum is defined as
+as measured by the "stationary" observer where any vector $\underline{\mathbf{A}}$ will represent a 4-vector, $\vec{A}$ will be a standard 3-vector and natural units ($\hbar=c=1$) will be used unless explicitly written otherwise.  Similarly, the 4-momentum is defined as
 
 \begin{equation}
   \underline{\mathbf{p}}\ =\ m\underline{\mathbf{u}}\ =\ \left (\gamma m,\ \vec{p}\right )
@@ -24,13 +24,13 @@ These 4-vectors have invariant quantities
     =\ p^{\alpha}p_{\alpha}\ =\ -m^2
   \end{gathered}
 \end{equation}
-For massless particles, it is convient to re-write the 4-momentum in terms of its 'angular' frequency $\omega$ and the unit vector in the direction it is traveling.
+For massless particles, it is convenient to re-write the 4-momentum in terms of its 'angular' frequency $\omega$ and the unit vector in the direction it is traveling.
 
 \begin{equation}
   \underline{\mathbf{p}}\ =\ \omega\left (1,\ \hat{p}\right )
 \end{equation}
 
-\hskip 25pt Building off of this, we can think about a collection of non-interacting particles.  Lets say there is a "dust" cloud in the vacuum of space, where the collection of dust particles are not interacting with one another.  The dust will have an energy density, but no collisions or forces between them.  Imagine a small Gaussian cube that will represent the physical space the dust can move in and out of.  In the rest frame of this Gaussian cube, we can ask how many particles are found within this cubic volumne of space, a.k.a. the number density.  We can define $n_0$ to be the number density of the dust within some cubic volume of space in the rest frame of this space.
+\hskip 25pt Building off of this, we can think about a collection of non-interacting particles.  Lets say there is a "dust" cloud in the vacuum of space, where the collection of dust particles are not interacting with one another.  The dust will have an energy density, but no collisions or forces between them.  Imagine a small Gaussian cube that will represent the physical space the dust can move in and out of.  In the rest frame of this Gaussian cube, we can ask how many particles are found within this cubic volume of space, a.k.a. the number density.  We can define $n_0$ to be the number density of the dust within some cubic volume of space in the rest frame of this space.
 
 \begin{equation}
   \begin{aligned}
@@ -78,7 +78,7 @@ BTW, this shows that the unit vector of the 4-number density, $\widehat{\underli
 \begin{equation}
   \delta^{\alpha}_{\beta}N^{\beta} =\ N^{\alpha}
 \end{equation}
-This is just a mathematically tidious way to say "pick the component of $\underline{\mathbf{N}}$ that is in the direction of interest".  More generally, we are taking the projection of $\underline{\mathbf{N}}$ in the unit direction of the direction of interest.
+This is just a mathematically tedious way to say "pick the component of $\underline{\mathbf{N}}$ that is in the direction of interest".  More generally, we are taking the projection of $\underline{\mathbf{N}}$ in the unit direction of the direction of interest.
 
 \begin{equation}
   \hat{x}_{\mu}N^{\mu}\ \equiv\ \mathit{Flux\ of\ density\ of\ particles\ in\ direction}\ \hat{\underline{\mathbf{x}}}
@@ -90,7 +90,7 @@ The flux of $\underline{\mathbf{N}}$ through time is just its time component
 \end{equation}
 which is the number density measured in the boosted frame.  
 
-\hskip 25pt  An intuitive conservation law is to compare the rate of change of the dust in the cubic volumne of space to the flux of the dust through that space.
+\hskip 25pt  An intuitive conservation law is to compare the rate of change of the dust in the cubic volume of space to the flux of the dust through that space.
 
 \begin{equation}
   \frac{\partial n}{\partial t}\ =\ -\vec{\nabla}\cdot\vec{n}
@@ -223,7 +223,7 @@ $$\mathit{or}$$
 \begin{equation}
   \partial_{\alpha}J^{\alpha}\ =\ 0
 \end{equation}
-When thinking about describing electromagnetism in a space-time way, similar to the conservation law, there is a small problem with constructing more simple 4-vectors to use.  The problem is that if one wanted to make a useful object out of the standard 3-vector way of thinking about $E$ and $B$ fields, it would be tough to construct two separate 4-vectors.  Maybe a tensor?  If the tensor only had 6 input components, then that could work.  A typical tensor would have 16 components.  If the tensor was symmetric, we would be down to only 10.  Thats a start, but still not good enough. If we had an antisymmetric tensor, the diagonal elements would be zero, leaving only 6 elements in total to worry about. This gives us a tip that electromagnetism can be described with some antisymmetric tensor.  This is already well established, but it is useful to have some intuition as to why it works.  The Maxwell tensor is defined as $\underline{\underline{\mathbf{F}}}$.
+When thinking about describing electromagnetism in a space-time way, similar to the conservation law, there is a small problem with constructing more simple 4-vectors to use.  The problem is that if one wanted to make a useful object out of the standard 3-vector way of thinking about $E$ and $B$ fields, it would be tough to construct two separate 4-vectors.  Maybe a tensor?  If the tensor only had 6 input components, then that could work.  A typical tensor would have 16 components.  If the tensor was symmetric, we would be down to only 10.  That's a start, but still not good enough. If we had an antisymmetric tensor, the diagonal elements would be zero, leaving only 6 elements in total to worry about. This gives us a tip that electromagnetism can be described with some antisymmetric tensor.  This is already well established, but it is useful to have some intuition as to why it works.  The Maxwell tensor is defined as $\underline{\underline{\mathbf{F}}}$.
 
 \begin{equation}
   F^{\mu\nu}\ =\
@@ -251,7 +251,7 @@ The conservation of current is a built-in feature of writing Maxwell's equations
     \therefore \partial_{\mu}J^{\mu}\ &=\ 0
   \end{aligned}
 \end{equation}
-This computation also reveals something in general about a contraction between antisymmetric ($\underline{\underline{\mathbf{A}}}$) and symetric tensors ($\underline{\underline{\mathbf{S}}}$).
+This computation also reveals something in general about a contraction between antisymmetric ($\underline{\underline{\mathbf{A}}}$) and symmetric tensors ($\underline{\underline{\mathbf{S}}}$).
 
 \begin{equation}
   A^{\mu\nu}S_{\mu\nu}\ \equiv\ 0
